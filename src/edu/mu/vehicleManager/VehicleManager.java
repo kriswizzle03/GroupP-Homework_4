@@ -211,6 +211,9 @@ public class VehicleManager {
 
     public int getNumberOfVehiclesByType(Class clazz) {
     	// Implement returning the number of objects in the vehicleList based on the object vehicle type
+    	if (vehicleList.isEmpty()) {
+            return 0; // Return null if the vehicle list is empty
+        }
     	
     	int vehicleTypeCount = 0;
     	//for each vehicle in vehicleList test to see if it is specified object vehicle type
@@ -371,7 +374,6 @@ public class VehicleManager {
     }
 
 	public ArrayList<Vehicle> getVehicleList() {
-		// TODO Auto-generated method stub
 		return vehicleList;
 	}
     
